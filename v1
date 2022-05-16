@@ -1,0 +1,6 @@
+import re
+import urllib.request
+response = urllib.request.urlopen('https://puls.com/create-appointment/zip-code')
+html = response.read()
+text = html.decode()
+re.findall('(.*?)',text)
